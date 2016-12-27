@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tyler Huynh's Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/409e734741.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+  </head>
+  <body>
+    <div class="container-fluid jumbotron">
+	  <div id="sidebar-wrapper">
+	    <ul class="sidebar-nav">
+	      <li class="sidebar-brand"><a class="test" href="#skills" data-toggle="tooltip" data-placement="right" title="Skills"><i class="fa fa-bar-chart fa-2x text-blue"></i></a></li>
+	      <li class="sidebar-brand"><a href="#projects" data-toggle="tooltip" data-placement="right" title="Projects"><i class="fa fa-code fa-2x text-blue"></i></a></li>
+	      <li class="sidebar-brand"><a href="#work" data-toggle="tooltip" data-placement="right" title="Work"><i class="fa fa-suitcase fa-2x text-blue"></i></a></li>
+	      <li class="sidebar-brand"><a href="#education" data-toggle="tooltip" data-placement="right" title="Education"><i class="fa fa-certificate fa-2x text-blue"></i></a></li>
+	    </ul>
+	  </div>
+      <div class="container" ng-app="myApp" ng-controller="myCtrl">
+
+        <!-- Contact Info Section -->
+		<div class="row thumbnail">
+		  <div class="col-md-2">
+		    <img src="images/tan.jpg" class="img-circle img-responsive" alt="Profile Pic">
+			<h2 class="text-center">Tyler Huynh</h2>
+		  </div>
+		  <div class="col-md-5">
+		    <p><i class="fa fa-user-circle-o fa-fw icon-right text-blue"></i>Full Stack Web Developer</p>
+		    <p><i class="fa fa-map-marker fa-fw icon-right text-blue"></i>Stanton, CA</p>
+		    <p><i class="fa fa-envelope fa-fw icon-right text-blue"></i>tylerhuynh100@gmail.com</p>
+		    <p><i class="fa fa-phone fa-fw icon-right text-blue"></i>(714) 468-2970</p>
+		  </div>
+		  <div class="col-md-5">
+		    <p><i class="fa fa-github fa-fw icon-right text-blue"></i><a href="https://github.com/thuynh8">github.com/thuynh8</a></p>
+		    <p><i class="fa fa-linkedin fa-fw icon-right text-blue"></i><a href="https://www.linkedin.com/in/tylerhuynh">linkedin.com/tylerhuynh</a></p>
+		  </div>
+		</div>
+        <!-- End Contact Info Section -->
+
+        <!-- Skills Section -->
+		<div class="row thumbnail" id="skills">
+		  <div class="col-md-12">
+		    <h2 class="text-grey"><i class="fa fa-bar-chart fa-fw icon-right text-blue"></i>Skills</h2><hr>
+		    <div class="row">
+		      <ul>
+		      <li ng-repeat="x in skills">
+		      <div class="col-md-10">
+		      	<div class="progress">
+		      	  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=
+		      	  "{{x.mastery}}" aria-valuemin="0" aria-valuemax="100" style="width:{{x.mastery}}%;">
+		      	  <span class="sr-only">{{x.mastery}}% Complete</span>
+				  </div>
+				  <span class="progress-type">{{x.name}}</span>
+				  <span class="progress-completed">{{x.mastery}}%</span>
+		      	</div>
+		      </div>
+		      <div class="col-md-2"></div>
+		      </li>
+		      </ul>
+			</div>
+		  </div>
+		</div>
+        <!-- End Skills Section -->
+
+        <!-- Project Section -->
+		<div class="row thumbnail" id="projects">
+		  <div class="col-md-12">
+		    <h2 class="text-grey"><i class="fa fa-code fa-fw icon-right text-blue"></i>Project Experience</h2><hr>
+		    <ul>
+		      <li ng-repeat="x in projects">
+		      	<h3><a href="{{x.link}}">{{x.name}}</a></h3>
+				<p><i class="fa fa-calendar fa-fw icon-right text-teal"></i>{{x.date}}</p>
+		      	<p>{{x.description}}</p>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+        <!-- End Project Section -->
+
+        <!-- Work Section -->
+		<div class="row thumbnail" id="work">
+		  <div class="col-md-12">
+		    <h2 class="text-grey"><i class="fa fa-suitcase fa-fw icon-right text-blue"></i>Work Experience</h2><hr>
+		    <ul>
+		      <li ng-repeat="x in work">
+		      	<h3><a href="{{x.link}}">{{x.name}}</a></h3>
+		      	<p><i class="fa fa-calendar fa-fw icon-right text-teal"></i>{{x.date}}</p>
+		      	<p>{{x.description}}</p>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+        <!-- End Work Section -->
+
+        <!-- Education Section -->
+		<div class="row thumbnail" id="education">
+		  <div class="col-md-12">
+		    <h2 class="text-grey"><i class="fa fa-certificate fa-fw icon-right text-blue"></i>Education</h2><hr>
+		    <ul>
+		      <li ng-repeat="x in education">
+		        <h3><a href="{{x.link}}">{{x.name}}</a></h3>
+		        <p><i class="fa fa-calendar fa-fw icon-right text-teal"></i>{{x.date}}</p>
+		        <p>{{x.degree}}</p>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+        <!-- End Education Section -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+	  <p><strong>Find Me On</strong></p>
+      <a class="btn btn-social-icon btn-github" href="https://github.com/thuynh8">
+        <span class="fa fa-2x fa-github"></span>
+      </a>
+      <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/tylerhuynh">
+        <span class="fa fa-2x fa-linkedin"></span>
+      </a>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>

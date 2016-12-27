@@ -1,0 +1,141 @@
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 50px;
+  background-color: rgba(250, 245, 245, 0.4);
+  position: fixed;
+  height: 22%;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-brand {
+	text-align: center;
+	padding: 5px;
+}
+
+.sidebar-brand > a:hover {
+    border-bottom: 5px solid teal;
+}
+
+@media (max-width: 842px) {
+    #sidebar-wrapper {
+        display: none;
+    }
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.icon-right {
+	margin-right: 10px;
+}
+
+.col-md-5 {
+	padding: 15px;
+}
+
+footer.container-fluid {
+	background-color: #B0C4DE;
+	padding: 20px;
+}
+
+.progress {
+	position: relative;
+	height: 25px;
+}
+
+.progress > .progress-type {
+	position: absolute;
+	left: 0px;
+	font-weight: 800;
+	padding: 3px 30px 2px 10px;
+}
+
+.progress > .progress-completed {
+	position: absolute;
+	right: 0px;
+	font-weight: 800;
+	padding: 3px 10px 2px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.text-grey {
+	color: #708090;
+}
+
+.text-teal {
+	color: #008080;
+}
+
+.text-blue {
+	color: #1c87bd;
+}
+
+.thumbnail {
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+a {
+    color: #708090;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn-github {
+    color:#fff;
+    background-color:#444;
+    border-color:rgba(0,0,0,0.2)
+}
+
+.btn-github:focus,.btn-github.focus {
+    color:#fff;
+    background-color:#2b2b2b;
+    border-color:rgba(0,0,0,0.2);
+}
+
+.btn-github:hover {
+    color:#fff;
+    background-color:#2b2b2b;
+    border-color:rgba(0,0,0,0.2);
+}
+
+.btn-linkedin {
+    color:#fff;
+    background-color:#007bb6;
+    border-color:rgba(0,0,0,0.2);
+}
+
+.btn-linkedin:focus,.btn-linkedin.focus {
+    color:#fff;
+    background-color:#005983;
+    border-color:rgba(0,0,0,0.2);
+}
+
+.btn-linkedin:hover {
+    color:#fff;
+    background-color:#005983;
+    border-color:rgba(0,0,0,0.2);
+}
+
